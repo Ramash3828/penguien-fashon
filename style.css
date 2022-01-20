@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@300;400;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --Bebas-Neue: 'Bebas Neue', cursive;
+    --primary-color: linear-gradient(to left, #A4BC46, #85A019);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5
+}
+
+
+/* Utilities */
+
+h1 {
+    font-family: var(--Bebas-Neue);
+}
+
+h1 span {
+    color: #FABE4C;
+}
+
+.section-title {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li {
+    list-style: none;
+}
+
+p {
+    color: #3E3E3E;
+    margin: 10px 0;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--primary-color);
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 2px solid #A4BC46;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.svg {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.primary-btn:hover,
+.primary-btn:hover .svg {
+    background: transparent;
+    color: black;
+    fill: black;
+}
+
+img.img-fluid {
+    transition: transform .5s ease-out;
+    -webkit-transition: transform .5s ease-out;
+    -moz-transition: transform .5s ease-out;
+    -ms-transition: transform .5s ease-out;
+    -o-transition: transform .5s ease-out;
+}
+
+img.img-fluid:hover {
+    transform: scale(1.5);
+}
+
+.banner .img-fluid:hover,
+.contact .img-fluid:hover {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+
+
+/* Main Menu */
+
+.main-menu {
+    background: #FFFBF0;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+}
+
+.navbar-brand img {
+    width: 30px;
+}
+
+.navbar-brand span {
+    color: #A4BC46;
+}
+
+.nav-item {
+    margin: 0 5px;
+    background-color: yellowgreen;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.nav-link {
+    color: #000;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.myNav .nav-link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -20px;
+    height: 100%;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transform: skewX(45deg) translateX(0);
+    z-index: -1;
+}
+
+.nav-item:hover .nav-link {
+    color: darkgreen;
+}
+
+.nav-item:hover .nav-link::before {
+    width: 200%;
+}
+
+
+/* Banner */
+
+.banner {
+    background: #FFFBF0;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.cart,
+.cart__img {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.priceing span {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(248, 166, 58);
+}
+
+
+/* Contact Area */
+
+.contact {
+    padding: 50px 0;
+}
+
+.contact__left img {
+    width: 100px;
+}
+
+.single-contact {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+@media (max-width:767px) {
+    .nav-item {
+        margin-bottom: 15px;
+    }
+    .myNav {
+        position: relative;
+        top: 0;
+        text-align: center;
+    }
+    .navbar-toggler:focus {
+        outline: unset;
+        box-shadow: unset;
+        border: none;
+    }
+    .navbar-toggler img {
+        width: 40px;
+        height: auto;
+    }
+    .banner__left {
+        display: grid;
+        place-items: center;
+        margin-top: 50px;
+    }
+    .banner__img {
+        order: -1;
+    }
+}
+
+@media (max-width:575px) {
+    .single-contact {
+        text-align: center;
+    }
+    .banner__area .banner__left {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width:360px) {
+    .banner__left h1 {
+        font-size: 25px;
+    }
+    .banner__left p {
+        font-size: 12px;
+    }
+}
